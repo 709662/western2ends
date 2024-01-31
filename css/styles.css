@@ -1,0 +1,253 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scale: 100%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0px;
+  background-color: #f0c388;
+  color: #333; /* all the text colour*/
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  width: 10px 0;
+  font-weight: 100;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  height: 70px;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+section.cover-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(95, 199, 199);
+  overflow: auto;
+  height: 490px;
+  align-items: center;
+}
+
+.cover-image {
+  color: white;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cover-text {
+  margin-left: 350px;
+  font-size: 26px 10px;
+  text-align: justify;
+}
+
+section.articles,
+section.articles-longer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  align-items: stretch;
+}
+
+article {
+  padding: 15px;
+  background-color: rgb(233, 233, 233);
+  height: auto;
+  width: auto;
+  margin: 10px;
+  border-radius: 15px;
+  text-align: justify;
+}
+
+.article-longer {
+  display: flex;
+  background-color: rgb(233, 233, 233);
+  height: auto;
+  width: auto;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.article-image,
+.article-image-longer {
+  background-color: beige;
+  background-size: cover;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 15px;
+  min-height: 400px;
+  min-width: 400px;
+}
+
+.article-text {
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+  flex-grow: 1;
+}
+
+.article-longer-text {
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+}
+
+.form {
+  background-color: rgb(233, 233, 233);
+  height: 600px;
+  width: 100%;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: bottom;
+  width: 100%;
+}
+
+/* Mobile Devices*/
+@media only screen and (max-width: 391px) {
+  section.cover-container {
+    height: 30%;
+    align-items: start;
+  }
+  .cover-image {
+    object-fit: cover;
+    height: 200px;
+    margin: 0;
+  }
+  .cover-text {
+    font-size: 10px;
+    margin-left: 20px;
+    margin-bottom: -20px;
+    margin-top: -20px;
+    justify-items: center;
+  }
+  .article,
+  .article-longer {
+    width: 390px;
+    flex-direction: column;
+    margin: 20px 50px 20px 50px;
+  }
+  .article-image,
+  .article-image-longer {
+    min-height: 300px;
+    min-width: 300px;
+  }
+
+  .article-text,
+  .article-longer-text {
+    width: auto;
+  }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 392px) and (max-width: 810px) {
+  .cover-image,
+  .cover-container {
+    width: 50%;
+  }
+  .cover-text {
+    width: 50%;
+  }
+  .articles {
+    width: 48%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    align-items: stretch;
+  }
+  .article-longer {
+    display: flex;
+
+    width: 809px;
+  }
+  .article-image,
+  .article-image-longer {
+    min-height: 200px;
+    min-width: 200px;
+  }
+  .article-text,
+  .article-longer-text {
+    width: auto;
+  }
+}
+
+/* Laptop Devices 
+@media only screen and (min-width: 811px) and (max-width: 1920px) {
+  .cover-image {
+    width: 100%;
+  }
+  .cover-text {
+    width: 40%;
+  }
+  .article,
+  .article-longer {
+    width: 30%;
+  }
+  .article-longer {
+    display: flex;
+  }
+  .article-image,
+  .article-image-longer {
+    min-height: 300px;
+    min-width: 300px;
+  }
+  .article-text,
+  .article-longer-text {
+    width: auto;
+  }
+}
+*/
