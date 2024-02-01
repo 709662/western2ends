@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <meta http-equiv="refresh" content="30" />
+
     <title>Western 2ends - Home</title>
   </head>
   <body>
@@ -12,12 +14,14 @@
     </header>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="./html/attractions.html">Attractions</a>
-      <a href="./html/shopping.html">Shopping</a>
-      <a href="./html/restaurants.html">Restaurants</a>
-      <a href="./html/events.html">Events</a>
-      <a href="./html/contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./html/attractions.html">Attractions</a></li>
+        <li><a href="./html/shopping.html">Shopping</a></li>
+        <li><a href="./html/restaurants.html">Restaurants</a></li>
+        <li><a href="./html/events.html">Events</a></li>
+        <li><a href="./html/contact.html">Contact</a></li>
+      </ul>
     </nav>
 
     <section class="cover-container">
@@ -27,21 +31,53 @@
 
       <section class="cover-text">
         <h3>A western city guide to never miss out.</h3>
-        <p>
-          Whether it’s the best coffee in town or a must-see historical site.
-        </p>
+
         <p>Let’s explore the Amsterdam New-West together!</p>
       </section>
     </section>
 
     <section class="articles">
-      <article>
-        <figure class="article-image">
-          <img src="#" alt="Article 1" />
-        </figure>
-        <h2>Article 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <article class="services-article-container">
+        <!-- <h2>Amsterdam Coffee Festival</h2> -->
+
+        <div class="services-image-containers">
+          <figure class="services-image-longer">
+            <img src="#" alt="A" />
+          </figure>
+        </div>
+        <div class="services-image-containers">
+          <figure class="services-image-longer">
+            <img src="#" alt="A" />
+          </figure>
+        </div>
+        <div class="services-image-containers">
+          <figure class="services-image-longer">
+            <img src="#" alt="A" />
+          </figure>
+        </div>
+        <div class="services-image-containers">
+          <figure class="services-image-longer">
+            <img src="#" alt="A" />
+          </figure>
+        </div>
       </article>
+
+      <article class="article-longer">
+        <section class="article-longer-text">
+          <h2>Amsterdam Coffee Festival</h2>
+          <p>
+            The Amsterdam Coffee Festival typically features over 100 artisan
+            roasters, equipment makers, gourmet food stalls and more. Some of
+            Europe’s best baristas look set to host workshops and tastings while
+            Dutch and international acts will provide live music, entertainment
+            and art.
+          </p>
+        </section>
+        <figure class="article-image-longer">
+          <img src="#" alt="Amsterdam Coffee Festival" />
+        </figure>
+      </article>
+
       <article>
         <figure class="article-image">
           <img src="#" alt="Article 2" />
@@ -56,26 +92,50 @@
         <h2>Article 3</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </article>
-      <article>
-        <figure class="article-image">
-          <img src="#" alt="Article 4" />
+
+      <article class="article-longer">
+        <figure class="article-image-longer">
+          <img src="#" alt="Amsterdam Coffee Festival" />
         </figure>
-        <h2>Article 4</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <section class="article-longer-text">
+          <h2>Amsterdam Coffee Festival</h2>
+          <p>
+            The Amsterdam Coffee Festival typically features over 100 artisan
+            roasters, equipment makers, gourmet food stalls and more. Some of
+            Europe’s best baristas look set to host workshops and tastings while
+            Dutch and international acts will provide live music, entertainment
+            and art.
+          </p>
+        </section>
       </article>
-      <article>
-        <figure class="article-image">
-          <img src="#" alt="Article 5" />
-        </figure>
-        <h2>Article 5</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </article>
-      <article>
-        <figure class="article-image">
-          <img src="#" alt="Article 6" />
-        </figure>
-        <h2>Article 6</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <article class="questions">
+        <h1>Frequently Asked Questions</h1>
+
+        <ol>
+          <li>
+            <button onclick="toggleAnswer(this)">What is Lorem Ipsum?</button>
+            <p class="answer">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </li>
+          <li>
+            <button onclick="toggleAnswer(this)">Why do we use it?</button>
+            <p class="answer">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </li>
+          <li>
+            <button onclick="toggleAnswer(this)">
+              Where does it come from?
+            </button>
+            <p class="answer">
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+            </p>
+          </li>
+        </ol>
       </article>
     </section>
 
@@ -83,5 +143,29 @@
     <footer>
       <p>&copy; 2023 Western 2ends</p>
     </footer>
+
+    <script>
+      function toggleAnswer(button) {
+        const answer = button.nextElementSibling;
+        answer.style.display =
+          answer.style.display === "none" || answer.style.display === ""
+            ? "block"
+            : "none";
+      }
+    </script>
+
+    <script>
+      // Store scroll position in sessionStorage
+      window.addEventListener("scroll", function () {
+        sessionStorage.scrollPos = window.scrollY;
+      });
+
+      // Set scroll position on page load
+      window.addEventListener("load", function () {
+        if (sessionStorage.scrollPos) {
+          window.scrollTo(0, sessionStorage.scrollPos);
+        }
+      });
+    </script>
   </body>
 </html>
