@@ -16,7 +16,7 @@ body {
   margin: 0;
   min-height: 100vh;
   padding: 0px;
-  background-color: #f0c388;
+  background-color: lightblue;
   color: #333; /* all the text colour*/
   line-height: 1.6;
 }
@@ -38,32 +38,37 @@ img {
 }
 
 header {
-  background-color: #007bff;
+  background-color: rgb(8, 106, 181);
   color: #fff;
   padding: 5px;
   text-align: center;
   height: 70px;
 }
 
-nav {
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
+nav ul {
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: 50px;
+  background-color: lightblue;
+  padding: 10px;
+  text-align: center;
 }
 
 nav a {
-  color: #fff;
+  color: rgb(117, 46, 13);
   text-decoration: none;
   margin: 0 15px;
 }
 
+nav a:hover {
+  background-color: #638ab5;
+  color: #fff;
+  border-radius: 5px;
+}
+
 section.cover-container {
-  display: flex;
-  flex-wrap: wrap;
   background-color: rgb(95, 199, 199);
   overflow: auto;
   height: 490px;
@@ -71,16 +76,18 @@ section.cover-container {
 }
 
 .cover-image {
-  color: white;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
 .cover-text {
-  margin-left: 350px;
-  font-size: 26px 10px;
+  font-size: 25px;
   text-align: justify;
+  color: rgb(249, 249, 249);
+
+  margin-left: 10rem;
+  margin-top: -200px;
 }
 
 section.articles,
@@ -110,6 +117,8 @@ article {
   background-color: rgb(233, 233, 233);
   height: auto;
   width: auto;
+  max-width: 940px;
+
   margin: 10px;
   border-radius: 15px;
 }
@@ -127,6 +136,32 @@ article {
   min-width: 400px;
 }
 
+.services-article-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  background-size: cover;
+  height: auto;
+  max-width: 940px;
+
+  margin: 20px 80px 20px 80px;
+  border-radius: 15px;
+
+  justify-content: center;
+  padding: 5px;
+  padding-top: 60px;
+}
+.services-image-containers {
+  background-color: #638ab5;
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 5px;
+}
+
 .article-text {
   padding: 20px;
   border-radius: 15px;
@@ -138,14 +173,6 @@ article {
   padding: 20px;
   border-radius: 15px;
   width: 500px;
-}
-
-.form {
-  background-color: rgb(233, 233, 233);
-  height: 600px;
-  width: 100%;
-  margin: 10px;
-  border-radius: 15px;
 }
 
 footer {
@@ -225,29 +252,86 @@ footer {
   }
 }
 
-/* Laptop Devices 
-@media only screen and (min-width: 811px) and (max-width: 1920px) {
-  .cover-image {
-    width: 100%;
-  }
-  .cover-text {
-    width: 40%;
-  }
-  .article,
-  .article-longer {
-    width: 30%;
-  }
-  .article-longer {
-    display: flex;
-  }
-  .article-image,
-  .article-image-longer {
-    min-height: 300px;
-    min-width: 300px;
-  }
-  .article-text,
-  .article-longer-text {
-    width: auto;
-  }
+.form {
+  display: flex;
+  width: 100%;
+  margin: 20px auto 5px auto;
+  border-radius: 15px;
+  background-color: rgb(233, 233, 233);
+  padding: 10px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+  position: bottom;
 }
-*/
+
+.maps {
+  width: 600px;
+  height: 400px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  background-color: aqua;
+  align-self: center;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  height: 100px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+button {
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+}
+
+.answer {
+  margin-top: 5px;
+  display: none;
+}
+
+.questions {
+  background-color: #e0f2f1;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 940px;
+  max-height: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
