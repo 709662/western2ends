@@ -285,6 +285,7 @@ button {
   margin-top: 5px;
   display: none;
   text-indent: 10px;
+  color: black;
 }
 
 .questions {
@@ -295,6 +296,13 @@ button {
   max-height: 530px;
   width: 100%;
   margin-bottom: 70px;
+  border-color: #43766c;
+  border-style: double;
+  border-width: 5px;
+}
+
+.read-more-btn a:visited {
+  color: #638ab5;
 }
 footer {
   background-color: #43766c;
@@ -386,7 +394,7 @@ footer {
   }
 }
 
-/* Laptop Devices */
+/* Desktop Devices */
 @media only screen and (min-width: 1280px) {
   .article {
     display: flex;
