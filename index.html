@@ -14,22 +14,26 @@
 
     <nav>
       <ul>
+        <li class="main-menu"><a href="index.html">Home</a></li>
+        <li class="main-menu">
+          <a href="./html/attractions.html">Attractions</a>
+        </li>
+        <li class="main-menu"><a href="./html/shopping.html">Shopping</a></li>
+        <li class="main-menu">
+          <a href="./html/restaurants.html">Restaurants</a>
+        </li>
+        <li class="main-menu"><a href="./html/events.html">Events</a></li>
+        <li class="main-menu"><a href="./html/contact.html">Contact</a></li>
+        <li class="menu-icon" onclick="toggleMenu()">&#9776;</li>
+      </ul>
+      <ul class="menu-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="./html/attractions.html">Attractions</a></li>
         <li><a href="./html/shopping.html">Shopping</a></li>
         <li><a href="./html/restaurants.html">Restaurants</a></li>
         <li><a href="./html/events.html">Events</a></li>
         <li><a href="./html/contact.html">Contact</a></li>
-        <section class="menu-icon" onclick="toggleMenu()">&#9776;</section>
       </ul>
-      <section class="menu-links">
-        <a href="index.html">Home</a>
-        <a href="./html/attractions.html">Attractions</a>
-        <a href="./html/shopping.html">Shopping</a>
-        <a href="./html/restaurants.html">Restaurants</a>
-        <a href="./html/events.html">Events</a>
-        <a href="./html/contact.html">Contact</a>
-      </section>
     </nav>
 
     <section class="cover-container">
@@ -47,7 +51,7 @@
       <article class="article-longer">
         <figure class="article-image-longer">
           <img
-            src="./images/Adventure awaits.jpg"
+            src="./images/Adventure-awaits.jpeg"
             alt="Adventure awaits image"
           />
         </figure>
@@ -74,7 +78,7 @@
 
       <article>
         <figure class="article-image">
-          <img src="./images/All You Can Shop.jpg" alt="A" />
+          <img src="./images/All-you-can-shop.jpeg" alt="A" />
         </figure>
 
         <section class="article-text">
@@ -97,7 +101,7 @@
       </article>
       <article>
         <figure class="article-image">
-          <img src="./images/Lunch & Dine.jpg" alt="Article 3" />
+          <img src="./images/Lunch-and-dine.jpeg" alt="Article 3" />
         </figure>
         <section class="article-text">
           <h2>Lunch & Dine</h2>
@@ -120,7 +124,10 @@
 
       <article class="article-longer">
         <figure class="article-image-longer">
-          <img src="./images/Joyful Calendar.jpg" alt="Joyful Calendar image" />
+          <img
+            src="./images/Joyful-calendar.jpeg"
+            alt="Joyful Calendar image"
+          />
         </figure>
         <section class="article-longer-text">
           <h2>Joyful Calendar of <em>Family-Friendly</em> Events</h2>
@@ -146,7 +153,7 @@
         <h2 class="word-spacing">Frequently Asked Questions</h2>
 
         <ol>
-          <li>
+          <li class="site-questions">
             <button onclick="toggleAnswer(this)">
               What are the best shopping centers, local restaurants, and cafes
               to try?
@@ -157,7 +164,7 @@
               spots, ensuring families can plan memorable and enjoyable outings.
             </p>
           </li>
-          <li>
+          <li class="site-questions">
             <button onclick="toggleAnswer(this)">
               What events or activities are suitable for all ages to visit?
             </button>
@@ -167,7 +174,7 @@
               enjoyable experiences.
             </p>
           </li>
-          <li>
+          <li class="site-questions">
             <button onclick="toggleAnswer(this)">
               Can I find family-friendly itineraries for a day or weekend in
               Amsterdam Nieuw-West?
